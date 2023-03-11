@@ -4,7 +4,7 @@
 // if (number % 2 === 0) {
 //  console.log(`${number} even number`);
 // } else {console.log(`${number} odd number`);}
-console.log("test");
+// console.log("test");
 for (let i = 1; i <= 10; i++) {
     if (i % 2 === 0) {
     console.log(`${i} adalah bilangan genap`);    

@@ -7,20 +7,19 @@ console.log(n + ' X ' + a );
 // Write a code to check whether a string is a palindrome or not.
 //declare string
 // looping untuk membalikan string
-let str = "car"
+let str = "madam"
 // console.log(str.charAt(str.length-1))
 let reverse = "";
-for (let i = str.length-1; i >= 0; i--) {
+for (let i = str.length -1; i >= 0; i--) {
     reverse += str.charAt(i)
-}
-if(str == reverse) {
+//     console.log(i);
+    // reverse = reverse + str.charAt(i)
+}if(str == reverse) {
     console.log(`${str} adalah polindrome`)
-}
-else{
+}else{
     console.log(`${str} bukan polindrome`)
-
-
 }
+
 
 // Write a code to convert centimeter to kilometer.
 // 1 cm = 0.00001 km
@@ -30,7 +29,13 @@ let i = cm / 100000;
 console.log(`${cm} CM jika dikonversikan ke dalam KM, maka hasilnya adalah ${i} KM`);
  
 // Write a code to format number as currency (IDR)
+// Example : 1000 → “Rp. 1.000,00”
+number = 100000;
+// console.log(number.toLocaleString().replace(/,/g, '.'));
+// console.log(number.toLocaleString().split(',').join('.'));
 
+// let strNumber = number.toLocaleString('id-ID') + ',00';
+console.log(`Rp. ${number.toLocaleString('id-ID') + ',00'}`);
 
 // Write a code to remove the first occurrence of a given “search string” from a string
 let a = 'abcde';
