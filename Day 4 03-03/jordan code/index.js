@@ -7,22 +7,22 @@ var arr = [1, 2, 3, 4, 5];
 
 var arr = new Array(1, 2, 3, 4, 5, 7, 8);
 
-arr = ['a', 'b', 'c'];
+arr = ["a", "b", "c"];
 
 console.log(arr[0] + arr[1] + arr[2]);
-console.log(arr.toString().replace(/,/g, '')); //abc
-console.log(arr.join('/')); // a/b/c
+console.log(arr.toString().replace(/,/g, "")); //abc pakai regex
+console.log(arr.join("/")); // a/b/c
 console.log(arr.pop()); //menghapus index terakhir dan return value index terakhir
 console.log(arr); // [a,b]
-console.log(arr.push('e')); //menambah 1 index baru di akhir array dan return value length terbaru
+console.log(arr.push("e")); //menambah 1 index baru di akhir array dan return value length terbaru
 console.log(arr); // [a,b,e]
 console.log(arr.shift()); //menghapus index pertama dan return value index pertama
 console.log(arr); // [b,e]
-console.log(arr.unshift('f')); //menambah 1 index baru di awal array dan return value length terbaru
+console.log(arr.unshift("f")); //menambah 1 index baru di awal array dan return value length terbaru
 console.log(arr); //[f,b,e]
 console.log(arr.length);
 
-let arr2 = ['x', 'y', 'z'];
+let arr2 = ["x", "y", "z"];
 let arr3 = arr.concat(arr2);
 console.log(arr.concat(arr2)); //menggabungkan 2 array dan return value array
 console.log(arr);
@@ -42,16 +42,16 @@ arr = arr.concat(arr2);
 console.log(arr);
 
 for (let i = 0; i < arr.length; i++) {
- for (let j = 0; j < arr[i].length; j++) {
-  for (let k = 0; k < arr[i][j].length; k++) {
-   console.log(arr[i][j][k]);
-   //arr[6][4][0]
-   //arr[6][4][1]
-   //arr[6][4][2]
-   //arr[6][4][3]
-   //4 < 4 false
+  for (let j = 0; j < arr[i].length; j++) {
+    for (let k = 0; k < arr[i][j].length; k++) {
+      console.log(arr[i][j][k]);
+      //arr[6][4][0]
+      //arr[6][4][1]
+      //arr[6][4][2]
+      //arr[6][4][3]
+      //4 < 4 false
+    }
   }
- }
 }
 
 console.log(arr);
@@ -62,10 +62,10 @@ arr.push(1);
 arr.push(1);
 arr.push(1);
 arr.push(1);
-arr.push('z');
-arr.push('a');
-arr[6].push('c');
-arr[6].push('a');
+arr.push("z");
+arr.push("a");
+arr[6].push("c");
+arr[6].push("a");
 
 console.log(arr.slice(0, 6));
 console.log(arr);
@@ -76,32 +76,32 @@ console.log(arr.lastIndexOf(1)); //menemukan letak index dari value 1 yang terak
 arr.sort(); //mengurutkan value kecil ke besar dari sebuah array
 console.log(arr);
 console.log(arr.indexOf(6));
-arr[10].sort();
+arr[10].sort(); // urutan abjad
 console.log(arr);
 arr.reverse();
 console.log(arr);
 //method apa saja yg mempengaruhi origin array?
 //push,pop,shift,unshift,splice,sort, reverse
 
-arr = ['Jakarta', 'Bandung', 'Batam', 'Bali'];
+arr = ["Jakarta", "Bandung", "Batam", "Bali"];
 
 for (let i of arr) {
- console.log('Kota ' + i);
+  console.log("Kota " + i);
 }
 
 for (let i = 0; i < arr.length; i++) {
- console.log(arr[i]);
+  console.log(arr[i]);
 }
 
 //loop menggunakan map dengan hasil return sebuah array
 let newArr = arr.map((val) =>
- val == 'Jakarta' || val == 'Bali' ? val : undefined
+  val == "Jakarta" || val == "Bali" ? val : undefined
 );
 console.log(arr);
 //loop menggunakan filter hasil return sebuah array yang disaring sesuai dengan kondisinya
-let filteredArr = arr.filter((val) => val == 'Jakarta' || val == 'Bali');
+let filteredArr = arr.filter((val) => val == "Jakarta" || val == "Bali");
 
-let find = arr.find((val) => val != 'Bandung');
+let find = arr.find((val) => val != "Bandung");
 //loop menggunakan find hasil return sebuah value yang disaring sesuai dengan kondisi
 
 //callback function
@@ -115,3 +115,11 @@ let find = arr.find((val) => val != 'Bandung');
 console.log(newArr);
 console.log(filteredArr);
 console.log(find);
+
+cth = [1, "ab", "$", "!"];
+console.log(cth.sort());
+
+cth2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 100, -1];
+console.log(cth2.sort());
+
+console.log(cth2.map((val) => val + "aku"));

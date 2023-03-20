@@ -1,6 +1,8 @@
 // Write a code to find perimeter of rectangle
-let length = 5;
-let width = 10;
-
-let perimeter = 2 * (length + width);
-console.log(perimeter);
+//dekalarasi
+//pertama cari tau rumus keliling dari persegi apa
+//rumus keliling persegi = 2 x (p + l)
+let p = 5;
+let l = 10;
+let kelilingPP = 2 * (p + l);
+console.log(kelilingPP);

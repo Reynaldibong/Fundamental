@@ -1,14 +1,18 @@
 // Write a code to find diameter, circumference and area of a circle
+//deklarassi
+//rumus luas lingkaran = p r kuadrat
+//rumus keliling lingkaran = p x Diameter
+
+//find diameter
 let r = 7;
-
+let pi = 3.14;
 let diameter = 2 * r;
-
 console.log(diameter);
 
-let circumference = 3.14 * diameter;
+//find circumference
+let circumferenceofcircle = pi * diameter;
+console.log(circumferenceofcircle.toFixed());
 
-console.log(circumference);
-
-let areaofcircle = 3.14 * r**2;
-
-console.log(areaofcircle);
+//find area
+let areaofcircle = pi * r ** 2;
+console.log(areaofcircle.toFixed());
